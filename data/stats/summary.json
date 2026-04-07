@@ -1,0 +1,7 @@
+{
+  "total_documents": 500,
+  "total_chunks": 3500,
+  "avg_words_per_doc": 131.3,
+  "label_0_dismissed": 236,
+  "label_1_accepted": 264
+}

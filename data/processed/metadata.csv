@@ -1,0 +1,501 @@
+label,outcome,year,court,ipc_sections,citations,word_count,doc_id,original_words,cleaned_words
+0,Dismissed,2013,Supreme Court of India,304B,(2013) 2 SCC 347,134,doc_00000,134,134
+0,Dismissed,2010,Delhi High Court,506,(2010) 4 SCC 120,132,doc_00001,132,132
+1,Accepted,2021,Supreme Court of India,506,(2021) 8 SCC 302,132,doc_00002,132,132
+1,Accepted,2015,Supreme Court of India,498A,(2015) 4 SCC 491,131,doc_00003,131,131
+1,Accepted,2011,Delhi High Court,307,(2011) 10 SCC 136,130,doc_00004,130,130
+0,Dismissed,2016,Calcutta High Court,302,(2016) 5 SCC 425,132,doc_00005,132,132
+0,Dismissed,2021,Punjab and Haryana High Court,354,(2021) 11 SCC 117,136,doc_00006,136,136
+1,Accepted,2016,Delhi High Court,498A,(2016) 11 SCC 428,129,doc_00007,129,129
+1,Accepted,2013,Bombay High Court,307,(2013) 15 SCC 350,131,doc_00008,131,131
+1,Accepted,2012,Bombay High Court,304B,(2012) 5 SCC 474,130,doc_00009,130,130
+0,Dismissed,2013,Madras High Court,506,(2013) 7 SCC 138,133,doc_00010,133,133
+1,Accepted,2013,Madras High Court,304B,(2013) 15 SCC 469,130,doc_00011,130,130
+1,Accepted,2013,Bombay High Court,395,(2013) 10 SCC 220,130,doc_00012,130,130
+1,Accepted,2012,Karnataka High Court,354,(2012) 13 SCC 25,131,doc_00013,131,131
+0,Dismissed,2019,Bombay High Court,304B,(2019) 7 SCC 306,131,doc_00014,131,131
+0,Dismissed,2020,Allahabad High Court,395,(2020) 15 SCC 275,132,doc_00015,132,132
+0,Dismissed,2016,Punjab and Haryana High Court,498A,(2016) 1 SCC 489,136,doc_00016,136,136
+1,Accepted,2023,Bombay High Court,498A,(2023) 9 SCC 312,130,doc_00017,130,130
+0,Dismissed,2018,Bombay High Court,420,(2018) 6 SCC 251,133,doc_00018,133,133
+0,Dismissed,2013,Delhi High Court,302,(2013) 15 SCC 291,133,doc_00019,133,133
+0,Dismissed,2022,Delhi High Court,304B,(2022) 11 SCC 244,131,doc_00020,131,131
+1,Accepted,2023,Bombay High Court,506,(2023) 15 SCC 277,130,doc_00021,130,130
+1,Accepted,2017,Allahabad High Court,420,(2017) 4 SCC 116,129,doc_00022,129,129
+0,Dismissed,2018,Punjab and Haryana High Court,304B,(2018) 4 SCC 4,135,doc_00023,135,135
+1,Accepted,2010,Supreme Court of India,304B,(2010) 9 SCC 122,131,doc_00024,131,131
+1,Accepted,2012,Calcutta High Court,498A,(2012) 13 SCC 243,129,doc_00025,129,129
+1,Accepted,2020,Madras High Court,392,(2020) 7 SCC 211,130,doc_00026,130,130
+1,Accepted,2016,Supreme Court of India,395,(2016) 4 SCC 99,132,doc_00027,132,132
+1,Accepted,2012,Calcutta High Court,420,(2012) 4 SCC 448,129,doc_00028,129,129
+0,Dismissed,2010,Calcutta High Court,304B,(2010) 15 SCC 386,132,doc_00029,132,132
+0,Dismissed,2017,Bombay High Court,420,(2017) 15 SCC 31,131,doc_00030,131,131
+1,Accepted,2014,Karnataka High Court,376,(2014) 7 SCC 357,129,doc_00031,129,129
+0,Dismissed,2014,Calcutta High Court,506,(2014) 10 SCC 377,131,doc_00032,131,131
+1,Accepted,2010,Supreme Court of India,506,(2010) 15 SCC 437,133,doc_00033,133,133
+0,Dismissed,2011,Bombay High Court,506,(2011) 10 SCC 35,131,doc_00034,131,131
+0,Dismissed,2013,Karnataka High Court,420,(2013) 2 SCC 215,132,doc_00035,132,132
+1,Accepted,2020,Punjab and Haryana High Court,354,(2020) 5 SCC 203,134,doc_00036,134,134
+0,Dismissed,2022,Allahabad High Court,376,(2022) 8 SCC 319,131,doc_00037,131,131
+1,Accepted,2013,Delhi High Court,354,(2013) 15 SCC 179,130,doc_00038,130,130
+1,Accepted,2012,Madras High Court,304B,(2012) 12 SCC 155,131,doc_00039,131,131
+0,Dismissed,2020,Supreme Court of India,354,(2020) 5 SCC 60,134,doc_00040,134,134
+0,Dismissed,2019,Bombay High Court,304B,(2019) 6 SCC 105,132,doc_00041,132,132
+1,Accepted,2011,Calcutta High Court,498A,(2011) 1 SCC 2,130,doc_00042,130,130
+1,Accepted,2021,Bombay High Court,307,(2021) 12 SCC 219,130,doc_00043,130,130
+0,Dismissed,2021,Supreme Court of India,506,(2021) 1 SCC 428,134,doc_00044,134,134
+1,Accepted,2010,Bombay High Court,307,(2010) 15 SCC 478,129,doc_00045,129,129
+0,Dismissed,2020,Punjab and Haryana High Court,302,(2020) 13 SCC 287,135,doc_00046,135,135
+0,Dismissed,2022,Bombay High Court,392,(2022) 1 SCC 92,131,doc_00047,131,131
+0,Dismissed,2012,Karnataka High Court,307,(2012) 14 SCC 20,131,doc_00048,131,131
+1,Accepted,2015,Madras High Court,395,(2015) 4 SCC 13,129,doc_00049,129,129
+0,Dismissed,2023,Karnataka High Court,420,(2023) 6 SCC 329,133,doc_00050,133,133
+0,Dismissed,2010,Karnataka High Court,506,(2010) 3 SCC 298,132,doc_00051,132,132
+1,Accepted,2016,Supreme Court of India,498A,(2016) 13 SCC 161,132,doc_00052,132,132
+1,Accepted,2013,Delhi High Court,392,(2013) 12 SCC 224,129,doc_00053,129,129
+1,Accepted,2011,Madras High Court,302,(2011) 6 SCC 340,131,doc_00054,131,131
+1,Accepted,2020,Allahabad High Court,304B,(2020) 7 SCC 357,130,doc_00055,130,130
+1,Accepted,2020,Bombay High Court,498A,(2020) 12 SCC 463,129,doc_00056,129,129
+0,Dismissed,2023,Allahabad High Court,376,(2023) 5 SCC 108,131,doc_00057,131,131
+0,Dismissed,2017,Punjab and Haryana High Court,392,(2017) 8 SCC 407,135,doc_00058,135,135
+1,Accepted,2020,Delhi High Court,376,(2020) 14 SCC 488,130,doc_00059,130,130
+0,Dismissed,2012,Allahabad High Court,420,(2012) 4 SCC 244,131,doc_00060,131,131
+0,Dismissed,2020,Delhi High Court,354,(2020) 12 SCC 197,131,doc_00061,131,131
+0,Dismissed,2020,Karnataka High Court,395,(2020) 13 SCC 218,131,doc_00062,131,131
+0,Dismissed,2010,Bombay High Court,420,(2010) 8 SCC 69,132,doc_00063,132,132
+1,Accepted,2023,Punjab and Haryana High Court,395,(2023) 8 SCC 460,133,doc_00064,133,133
+0,Dismissed,2022,Calcutta High Court,376,(2022) 5 SCC 393,131,doc_00065,131,131
+0,Dismissed,2017,Calcutta High Court,506,(2017) 5 SCC 121,131,doc_00066,131,131
+0,Dismissed,2011,Punjab and Haryana High Court,498A,(2011) 4 SCC 197,137,doc_00067,137,137
+1,Accepted,2016,Madras High Court,376,(2016) 8 SCC 213,130,doc_00068,130,130
+0,Dismissed,2022,Madras High Court,302,(2022) 7 SCC 245,131,doc_00069,131,131
+1,Accepted,2023,Punjab and Haryana High Court,302,(2023) 12 SCC 377,134,doc_00070,134,134
+1,Accepted,2014,Madras High Court,506,(2014) 1 SCC 200,129,doc_00071,129,129
+0,Dismissed,2012,Karnataka High Court,307,(2012) 10 SCC 289,131,doc_00072,131,131
+1,Accepted,2023,Delhi High Court,302,(2023) 1 SCC 134,129,doc_00073,129,129
+1,Accepted,2015,Punjab and Haryana High Court,392,(2015) 5 SCC 386,133,doc_00074,133,133
+0,Dismissed,2010,Allahabad High Court,392,(2010) 4 SCC 333,132,doc_00075,132,132
+0,Dismissed,2013,Supreme Court of India,304B,(2013) 3 SCC 123,133,doc_00076,133,133
+1,Accepted,2013,Calcutta High Court,376,(2013) 5 SCC 393,130,doc_00077,130,130
+0,Dismissed,2021,Bombay High Court,307,(2021) 5 SCC 56,132,doc_00078,132,132
+1,Accepted,2020,Supreme Court of India,354,(2020) 12 SCC 102,132,doc_00079,132,132
+0,Dismissed,2023,Madras High Court,304B,(2023) 13 SCC 22,132,doc_00080,132,132
+1,Accepted,2018,Karnataka High Court,307,(2018) 14 SCC 216,131,doc_00081,131,131
+1,Accepted,2020,Delhi High Court,395,(2020) 3 SCC 223,129,doc_00082,129,129
+1,Accepted,2022,Allahabad High Court,376,(2022) 7 SCC 423,130,doc_00083,130,130
+0,Dismissed,2023,Allahabad High Court,354,(2023) 15 SCC 231,133,doc_00084,133,133
+1,Accepted,2020,Calcutta High Court,420,(2020) 1 SCC 254,130,doc_00085,130,130
+1,Accepted,2015,Bombay High Court,307,(2015) 5 SCC 451,129,doc_00086,129,129
+0,Dismissed,2018,Allahabad High Court,354,(2018) 4 SCC 369,132,doc_00087,132,132
+1,Accepted,2021,Calcutta High Court,392,(2021) 12 SCC 252,130,doc_00088,130,130
+1,Accepted,2013,Supreme Court of India,395,(2013) 4 SCC 157,132,doc_00089,132,132
+1,Accepted,2018,Punjab and Haryana High Court,354,(2018) 12 SCC 282,133,doc_00090,133,133
+1,Accepted,2014,Punjab and Haryana High Court,307,(2014) 2 SCC 370,133,doc_00091,133,133
+0,Dismissed,2022,Punjab and Haryana High Court,420,(2022) 4 SCC 379,136,doc_00092,136,136
+1,Accepted,2019,Allahabad High Court,395,(2019) 14 SCC 100,130,doc_00093,130,130
+0,Dismissed,2014,Madras High Court,498A,(2014) 9 SCC 65,133,doc_00094,133,133
+0,Dismissed,2014,Supreme Court of India,498A,(2014) 14 SCC 386,133,doc_00095,133,133
+1,Accepted,2014,Delhi High Court,395,(2014) 8 SCC 175,129,doc_00096,129,129
+0,Dismissed,2011,Supreme Court of India,376,(2011) 8 SCC 38,134,doc_00097,134,134
+1,Accepted,2022,Supreme Court of India,354,(2022) 4 SCC 61,131,doc_00098,131,131
+0,Dismissed,2022,Karnataka High Court,506,(2022) 7 SCC 231,132,doc_00099,132,132
+0,Dismissed,2014,Allahabad High Court,395,(2014) 12 SCC 51,132,doc_00100,132,132
+0,Dismissed,2012,Madras High Court,420,(2012) 9 SCC 39,132,doc_00101,132,132
+1,Accepted,2021,Supreme Court of India,376,(2021) 1 SCC 119,131,doc_00102,131,131
+0,Dismissed,2020,Allahabad High Court,498A,(2020) 13 SCC 406,131,doc_00103,131,131
+0,Dismissed,2018,Madras High Court,354,(2018) 3 SCC 466,131,doc_00104,131,131
+1,Accepted,2012,Bombay High Court,498A,(2012) 12 SCC 423,130,doc_00105,130,130
+1,Accepted,2017,Allahabad High Court,354,(2017) 7 SCC 483,129,doc_00106,129,129
+0,Dismissed,2019,Calcutta High Court,498A,(2019) 12 SCC 166,131,doc_00107,131,131
+0,Dismissed,2013,Allahabad High Court,354,(2013) 14 SCC 138,131,doc_00108,131,131
+1,Accepted,2018,Supreme Court of India,354,(2018) 3 SCC 300,131,doc_00109,131,131
+1,Accepted,2015,Calcutta High Court,392,(2015) 6 SCC 344,130,doc_00110,130,130
+1,Accepted,2021,Bombay High Court,304B,(2021) 11 SCC 484,131,doc_00111,131,131
+1,Accepted,2015,Supreme Court of India,392,(2015) 2 SCC 497,131,doc_00112,131,131
+0,Dismissed,2016,Supreme Court of India,392,(2016) 9 SCC 186,134,doc_00113,134,134
+1,Accepted,2013,Calcutta High Court,354,(2013) 3 SCC 475,129,doc_00114,129,129
+0,Dismissed,2010,Calcutta High Court,498A,(2010) 3 SCC 160,131,doc_00115,131,131
+0,Dismissed,2011,Supreme Court of India,506,(2011) 8 SCC 485,134,doc_00116,134,134
+1,Accepted,2018,Bombay High Court,304B,(2018) 14 SCC 248,129,doc_00117,129,129
+1,Accepted,2012,Madras High Court,395,(2012) 15 SCC 307,129,doc_00118,129,129
+1,Accepted,2022,Bombay High Court,506,(2022) 15 SCC 404,130,doc_00119,130,130
+1,Accepted,2021,Allahabad High Court,506,(2021) 10 SCC 338,129,doc_00120,129,129
+1,Accepted,2017,Bombay High Court,395,(2017) 9 SCC 391,129,doc_00121,129,129
+0,Dismissed,2023,Karnataka High Court,506,(2023) 4 SCC 293,131,doc_00122,131,131
+1,Accepted,2015,Madras High Court,392,(2015) 15 SCC 416,129,doc_00123,129,129
+0,Dismissed,2010,Karnataka High Court,392,(2010) 10 SCC 170,131,doc_00124,131,131
+0,Dismissed,2017,Calcutta High Court,304B,(2017) 3 SCC 210,132,doc_00125,132,132
+1,Accepted,2015,Delhi High Court,376,(2015) 2 SCC 437,129,doc_00126,129,129
+0,Dismissed,2023,Karnataka High Court,307,(2023) 2 SCC 121,133,doc_00127,133,133
+0,Dismissed,2011,Madras High Court,498A,(2011) 3 SCC 356,132,doc_00128,132,132
+0,Dismissed,2022,Supreme Court of India,498A,(2022) 6 SCC 192,133,doc_00129,133,133
+0,Dismissed,2016,Bombay High Court,392,(2016) 3 SCC 41,131,doc_00130,131,131
+0,Dismissed,2017,Karnataka High Court,354,(2017) 8 SCC 327,132,doc_00131,132,132
+1,Accepted,2022,Calcutta High Court,498A,(2022) 11 SCC 280,130,doc_00132,130,130
+1,Accepted,2019,Delhi High Court,376,(2019) 7 SCC 354,129,doc_00133,129,129
+1,Accepted,2016,Calcutta High Court,498A,(2016) 4 SCC 196,130,doc_00134,130,130
+1,Accepted,2021,Punjab and Haryana High Court,354,(2021) 14 SCC 338,134,doc_00135,134,134
+0,Dismissed,2023,Allahabad High Court,392,(2023) 12 SCC 255,131,doc_00136,131,131
+0,Dismissed,2013,Madras High Court,498A,(2013) 5 SCC 348,132,doc_00137,132,132
+1,Accepted,2022,Delhi High Court,376,(2022) 10 SCC 187,129,doc_00138,129,129
+1,Accepted,2021,Delhi High Court,376,(2021) 4 SCC 68,130,doc_00139,130,130
+0,Dismissed,2014,Punjab and Haryana High Court,506,(2014) 15 SCC 423,136,doc_00140,136,136
+0,Dismissed,2017,Allahabad High Court,395,(2017) 13 SCC 495,133,doc_00141,133,133
+1,Accepted,2011,Karnataka High Court,420,(2011) 5 SCC 275,130,doc_00142,130,130
+1,Accepted,2019,Calcutta High Court,304B,(2019) 6 SCC 56,131,doc_00143,131,131
+1,Accepted,2018,Calcutta High Court,420,(2018) 4 SCC 332,129,doc_00144,129,129
+0,Dismissed,2011,Calcutta High Court,304B,(2011) 1 SCC 156,132,doc_00145,132,132
+0,Dismissed,2018,Delhi High Court,395,(2018) 8 SCC 190,132,doc_00146,132,132
+0,Dismissed,2016,Karnataka High Court,506,(2016) 10 SCC 209,132,doc_00147,132,132
+1,Accepted,2017,Supreme Court of India,498A,(2017) 14 SCC 186,133,doc_00148,133,133
+1,Accepted,2010,Punjab and Haryana High Court,304B,(2010) 4 SCC 496,134,doc_00149,134,134
+0,Dismissed,2020,Calcutta High Court,304B,(2020) 13 SCC 171,132,doc_00150,132,132
+0,Dismissed,2011,Bombay High Court,420,(2011) 4 SCC 417,132,doc_00151,132,132
+1,Accepted,2010,Punjab and Haryana High Court,420,(2010) 3 SCC 277,133,doc_00152,133,133
+0,Dismissed,2012,Bombay High Court,498A,(2012) 13 SCC 404,132,doc_00153,132,132
+0,Dismissed,2014,Punjab and Haryana High Court,420,(2014) 12 SCC 216,135,doc_00154,135,135
+1,Accepted,2017,Delhi High Court,506,(2017) 10 SCC 56,130,doc_00155,130,130
+1,Accepted,2021,Madras High Court,395,(2021) 11 SCC 494,130,doc_00156,130,130
+0,Dismissed,2016,Supreme Court of India,302,(2016) 12 SCC 466,133,doc_00157,133,133
+0,Dismissed,2019,Delhi High Court,395,(2019) 3 SCC 141,132,doc_00158,132,132
+1,Accepted,2018,Punjab and Haryana High Court,354,(2018) 9 SCC 310,133,doc_00159,133,133
+0,Dismissed,2021,Delhi High Court,392,(2021) 8 SCC 455,132,doc_00160,132,132
+1,Accepted,2016,Karnataka High Court,420,(2016) 2 SCC 161,131,doc_00161,131,131
+1,Accepted,2012,Punjab and Haryana High Court,392,(2012) 2 SCC 426,134,doc_00162,134,134
+1,Accepted,2021,Delhi High Court,304B,(2021) 9 SCC 31,129,doc_00163,129,129
+1,Accepted,2015,Punjab and Haryana High Court,354,(2015) 1 SCC 496,134,doc_00164,134,134
+0,Dismissed,2019,Allahabad High Court,498A,(2019) 11 SCC 247,133,doc_00165,133,133
+0,Dismissed,2015,Delhi High Court,420,(2015) 10 SCC 116,133,doc_00166,133,133
+0,Dismissed,2010,Supreme Court of India,392,(2010) 12 SCC 391,134,doc_00167,134,134
+0,Dismissed,2012,Punjab and Haryana High Court,498A,(2012) 11 SCC 206,137,doc_00168,137,137
+0,Dismissed,2021,Bombay High Court,304B,(2021) 7 SCC 233,131,doc_00169,131,131
+1,Accepted,2021,Bombay High Court,307,(2021) 10 SCC 44,131,doc_00170,131,131
+0,Dismissed,2010,Bombay High Court,302,(2010) 8 SCC 339,131,doc_00171,131,131
+1,Accepted,2016,Calcutta High Court,392,(2016) 13 SCC 263,130,doc_00172,130,130
+1,Accepted,2014,Punjab and Haryana High Court,304B,(2014) 11 SCC 158,133,doc_00173,133,133
+0,Dismissed,2010,Madras High Court,302,(2010) 5 SCC 485,131,doc_00174,131,131
+0,Dismissed,2015,Bombay High Court,420,(2015) 8 SCC 383,132,doc_00175,132,132
+0,Dismissed,2018,Bombay High Court,392,(2018) 9 SCC 427,131,doc_00176,131,131
+0,Dismissed,2016,Delhi High Court,307,(2016) 15 SCC 40,131,doc_00177,131,131
+1,Accepted,2021,Karnataka High Court,307,(2021) 2 SCC 208,130,doc_00178,130,130
+1,Accepted,2017,Punjab and Haryana High Court,302,(2017) 7 SCC 433,133,doc_00179,133,133
+0,Dismissed,2016,Madras High Court,304B,(2016) 14 SCC 159,131,doc_00180,131,131
+0,Dismissed,2011,Madras High Court,307,(2011) 9 SCC 100,133,doc_00181,133,133
+0,Dismissed,2011,Punjab and Haryana High Court,307,(2011) 4 SCC 89,135,doc_00182,135,135
+1,Accepted,2022,Bombay High Court,354,(2022) 13 SCC 289,130,doc_00183,130,130
+1,Accepted,2015,Calcutta High Court,354,(2015) 8 SCC 35,130,doc_00184,130,130
+0,Dismissed,2019,Calcutta High Court,395,(2019) 9 SCC 38,132,doc_00185,132,132
+1,Accepted,2010,Calcutta High Court,498A,(2010) 2 SCC 331,129,doc_00186,129,129
+0,Dismissed,2018,Karnataka High Court,304B,(2018) 15 SCC 415,131,doc_00187,131,131
+0,Dismissed,2017,Madras High Court,354,(2017) 8 SCC 53,133,doc_00188,133,133
+0,Dismissed,2010,Delhi High Court,307,(2010) 8 SCC 225,132,doc_00189,132,132
+1,Accepted,2014,Bombay High Court,506,(2014) 13 SCC 174,131,doc_00190,131,131
+0,Dismissed,2015,Supreme Court of India,354,(2015) 11 SCC 198,135,doc_00191,135,135
+0,Dismissed,2015,Allahabad High Court,498A,(2015) 11 SCC 73,132,doc_00192,132,132
+0,Dismissed,2019,Allahabad High Court,307,(2019) 9 SCC 193,131,doc_00193,131,131
+1,Accepted,2020,Bombay High Court,307,(2020) 6 SCC 10,130,doc_00194,130,130
+1,Accepted,2015,Allahabad High Court,307,(2015) 4 SCC 71,129,doc_00195,129,129
+0,Dismissed,2018,Delhi High Court,376,(2018) 6 SCC 449,132,doc_00196,132,132
+0,Dismissed,2012,Bombay High Court,354,(2012) 14 SCC 355,132,doc_00197,132,132
+1,Accepted,2016,Bombay High Court,354,(2016) 12 SCC 122,129,doc_00198,129,129
+0,Dismissed,2018,Allahabad High Court,395,(2018) 13 SCC 402,131,doc_00199,131,131
+1,Accepted,2017,Madras High Court,395,(2017) 13 SCC 196,131,doc_00200,131,131
+0,Dismissed,2022,Karnataka High Court,506,(2022) 1 SCC 329,131,doc_00201,131,131
+0,Dismissed,2021,Punjab and Haryana High Court,395,(2021) 2 SCC 391,136,doc_00202,136,136
+1,Accepted,2012,Allahabad High Court,376,(2012) 15 SCC 114,129,doc_00203,129,129
+1,Accepted,2010,Punjab and Haryana High Court,395,(2010) 6 SCC 121,133,doc_00204,133,133
+1,Accepted,2010,Delhi High Court,392,(2010) 14 SCC 366,131,doc_00205,131,131
+1,Accepted,2014,Bombay High Court,307,(2014) 14 SCC 72,129,doc_00206,129,129
+0,Dismissed,2011,Calcutta High Court,395,(2011) 4 SCC 428,132,doc_00207,132,132
+1,Accepted,2013,Karnataka High Court,376,(2013) 1 SCC 123,130,doc_00208,130,130
+1,Accepted,2023,Calcutta High Court,392,(2023) 9 SCC 9,130,doc_00209,130,130
+0,Dismissed,2016,Madras High Court,506,(2016) 6 SCC 124,131,doc_00210,131,131
+1,Accepted,2018,Karnataka High Court,354,(2018) 9 SCC 279,129,doc_00211,129,129
+1,Accepted,2010,Supreme Court of India,506,(2010) 5 SCC 383,131,doc_00212,131,131
+0,Dismissed,2013,Punjab and Haryana High Court,302,(2013) 12 SCC 388,136,doc_00213,136,136
+1,Accepted,2018,Bombay High Court,307,(2018) 3 SCC 426,129,doc_00214,129,129
+1,Accepted,2011,Calcutta High Court,395,(2011) 5 SCC 104,129,doc_00215,129,129
+1,Accepted,2014,Madras High Court,302,(2014) 8 SCC 130,129,doc_00216,129,129
+0,Dismissed,2023,Madras High Court,302,(2023) 6 SCC 140,132,doc_00217,132,132
+1,Accepted,2021,Punjab and Haryana High Court,304B,(2021) 6 SCC 499,133,doc_00218,133,133
+1,Accepted,2022,Calcutta High Court,376,(2022) 12 SCC 218,129,doc_00219,129,129
+1,Accepted,2018,Karnataka High Court,304B,(2018) 2 SCC 41,130,doc_00220,130,130
+1,Accepted,2019,Allahabad High Court,307,(2019) 12 SCC 228,130,doc_00221,130,130
+1,Accepted,2019,Calcutta High Court,307,(2019) 11 SCC 406,129,doc_00222,129,129
+0,Dismissed,2018,Delhi High Court,302,(2018) 3 SCC 435,131,doc_00223,131,131
+0,Dismissed,2011,Calcutta High Court,354,(2011) 6 SCC 186,131,doc_00224,131,131
+1,Accepted,2020,Supreme Court of India,392,(2020) 6 SCC 228,132,doc_00225,132,132
+1,Accepted,2016,Bombay High Court,304B,(2016) 5 SCC 128,130,doc_00226,130,130
+1,Accepted,2018,Supreme Court of India,304B,(2018) 2 SCC 135,131,doc_00227,131,131
+1,Accepted,2014,Calcutta High Court,498A,(2014) 2 SCC 70,129,doc_00228,129,129
+1,Accepted,2011,Calcutta High Court,304B,(2011) 6 SCC 364,129,doc_00229,129,129
+0,Dismissed,2021,Allahabad High Court,304B,(2021) 9 SCC 115,132,doc_00230,132,132
+1,Accepted,2022,Madras High Court,304B,(2022) 6 SCC 284,129,doc_00231,129,129
+0,Dismissed,2012,Punjab and Haryana High Court,354,(2012) 5 SCC 204,135,doc_00232,135,135
+0,Dismissed,2011,Karnataka High Court,395,(2011) 11 SCC 38,131,doc_00233,131,131
+0,Dismissed,2012,Calcutta High Court,395,(2012) 7 SCC 258,132,doc_00234,132,132
+0,Dismissed,2014,Delhi High Court,302,(2014) 6 SCC 479,132,doc_00235,132,132
+0,Dismissed,2023,Punjab and Haryana High Court,420,(2023) 4 SCC 326,136,doc_00236,136,136
+0,Dismissed,2019,Allahabad High Court,506,(2019) 11 SCC 87,131,doc_00237,131,131
+1,Accepted,2021,Bombay High Court,354,(2021) 1 SCC 423,129,doc_00238,129,129
+0,Dismissed,2014,Delhi High Court,302,(2014) 7 SCC 317,131,doc_00239,131,131
+1,Accepted,2020,Calcutta High Court,302,(2020) 4 SCC 413,130,doc_00240,130,130
+0,Dismissed,2021,Allahabad High Court,392,(2021) 8 SCC 213,131,doc_00241,131,131
+0,Dismissed,2019,Calcutta High Court,395,(2019) 14 SCC 368,131,doc_00242,131,131
+1,Accepted,2022,Punjab and Haryana High Court,307,(2022) 9 SCC 55,133,doc_00243,133,133
+1,Accepted,2014,Madras High Court,307,(2014) 3 SCC 50,129,doc_00244,129,129
+0,Dismissed,2016,Allahabad High Court,302,(2016) 14 SCC 168,131,doc_00245,131,131
+1,Accepted,2017,Punjab and Haryana High Court,354,(2017) 15 SCC 158,133,doc_00246,133,133
+1,Accepted,2018,Supreme Court of India,395,(2018) 4 SCC 299,132,doc_00247,132,132
+1,Accepted,2017,Supreme Court of India,307,(2017) 9 SCC 5,131,doc_00248,131,131
+1,Accepted,2021,Karnataka High Court,304B,(2021) 6 SCC 24,129,doc_00249,129,129
+1,Accepted,2013,Supreme Court of India,392,(2013) 5 SCC 38,132,doc_00250,132,132
+0,Dismissed,2023,Calcutta High Court,392,(2023) 2 SCC 202,132,doc_00251,132,132
+0,Dismissed,2022,Punjab and Haryana High Court,307,(2022) 10 SCC 261,136,doc_00252,136,136
+1,Accepted,2012,Supreme Court of India,392,(2012) 9 SCC 234,131,doc_00253,131,131
+0,Dismissed,2015,Bombay High Court,376,(2015) 10 SCC 379,133,doc_00254,133,133
+1,Accepted,2018,Punjab and Haryana High Court,498A,(2018) 10 SCC 154,134,doc_00255,134,134
+0,Dismissed,2020,Supreme Court of India,395,(2020) 10 SCC 158,135,doc_00256,135,135
+0,Dismissed,2019,Calcutta High Court,302,(2019) 1 SCC 299,132,doc_00257,132,132
+1,Accepted,2022,Bombay High Court,395,(2022) 14 SCC 349,130,doc_00258,130,130
+0,Dismissed,2013,Supreme Court of India,420,(2013) 6 SCC 215,134,doc_00259,134,134
+1,Accepted,2018,Karnataka High Court,376,(2018) 12 SCC 32,129,doc_00260,129,129
+1,Accepted,2020,Madras High Court,376,(2020) 7 SCC 161,130,doc_00261,130,130
+1,Accepted,2018,Calcutta High Court,376,(2018) 13 SCC 445,130,doc_00262,130,130
+1,Accepted,2014,Calcutta High Court,498A,(2014) 5 SCC 395,129,doc_00263,129,129
+1,Accepted,2017,Madras High Court,498A,(2017) 15 SCC 479,129,doc_00264,129,129
+1,Accepted,2020,Allahabad High Court,498A,(2020) 14 SCC 177,130,doc_00265,130,130
+0,Dismissed,2021,Allahabad High Court,376,(2021) 15 SCC 227,131,doc_00266,131,131
+1,Accepted,2023,Calcutta High Court,498A,(2023) 12 SCC 140,129,doc_00267,129,129
+0,Dismissed,2013,Delhi High Court,376,(2013) 11 SCC 464,132,doc_00268,132,132
+1,Accepted,2011,Madras High Court,506,(2011) 12 SCC 242,129,doc_00269,129,129
+1,Accepted,2012,Bombay High Court,304B,(2012) 15 SCC 451,129,doc_00270,129,129
+1,Accepted,2015,Calcutta High Court,395,(2015) 1 SCC 465,129,doc_00271,129,129
+1,Accepted,2012,Madras High Court,304B,(2012) 15 SCC 471,130,doc_00272,130,130
+1,Accepted,2021,Karnataka High Court,302,(2021) 1 SCC 153,129,doc_00273,129,129
+1,Accepted,2017,Delhi High Court,354,(2017) 14 SCC 259,131,doc_00274,131,131
+0,Dismissed,2015,Allahabad High Court,395,(2015) 8 SCC 332,131,doc_00275,131,131
+1,Accepted,2022,Bombay High Court,498A,(2022) 11 SCC 388,129,doc_00276,129,129
+1,Accepted,2023,Bombay High Court,420,(2023) 6 SCC 45,130,doc_00277,130,130
+1,Accepted,2017,Delhi High Court,392,(2017) 1 SCC 134,129,doc_00278,129,129
+1,Accepted,2015,Madras High Court,392,(2015) 12 SCC 294,129,doc_00279,129,129
+0,Dismissed,2010,Allahabad High Court,302,(2010) 5 SCC 82,133,doc_00280,133,133
+0,Dismissed,2015,Allahabad High Court,392,(2015) 3 SCC 245,132,doc_00281,132,132
+1,Accepted,2016,Calcutta High Court,376,(2016) 13 SCC 341,130,doc_00282,130,130
+1,Accepted,2018,Madras High Court,420,(2018) 12 SCC 186,130,doc_00283,130,130
+0,Dismissed,2018,Delhi High Court,304B,(2018) 9 SCC 77,131,doc_00284,131,131
+0,Dismissed,2011,Punjab and Haryana High Court,376,(2011) 10 SCC 251,136,doc_00285,136,136
+1,Accepted,2012,Calcutta High Court,304B,(2012) 10 SCC 30,129,doc_00286,129,129
+1,Accepted,2016,Calcutta High Court,506,(2016) 12 SCC 112,130,doc_00287,130,130
+0,Dismissed,2015,Delhi High Court,354,(2015) 1 SCC 479,131,doc_00288,131,131
+0,Dismissed,2016,Calcutta High Court,304B,(2016) 13 SCC 329,131,doc_00289,131,131
+1,Accepted,2023,Punjab and Haryana High Court,392,(2023) 2 SCC 350,133,doc_00290,133,133
+1,Accepted,2012,Bombay High Court,506,(2012) 3 SCC 373,131,doc_00291,131,131
+1,Accepted,2017,Supreme Court of India,420,(2017) 7 SCC 422,131,doc_00292,131,131
+1,Accepted,2012,Madras High Court,420,(2012) 15 SCC 449,129,doc_00293,129,129
+0,Dismissed,2022,Supreme Court of India,304B,(2022) 4 SCC 35,133,doc_00294,133,133
+0,Dismissed,2020,Supreme Court of India,304B,(2020) 12 SCC 23,133,doc_00295,133,133
+0,Dismissed,2013,Calcutta High Court,392,(2013) 9 SCC 149,131,doc_00296,131,131
+1,Accepted,2022,Punjab and Haryana High Court,420,(2022) 5 SCC 449,134,doc_00297,134,134
+0,Dismissed,2014,Madras High Court,376,(2014) 10 SCC 451,131,doc_00298,131,131
+1,Accepted,2010,Karnataka High Court,376,(2010) 11 SCC 196,130,doc_00299,130,130
+1,Accepted,2012,Punjab and Haryana High Court,506,(2012) 3 SCC 387,133,doc_00300,133,133
+0,Dismissed,2014,Calcutta High Court,506,(2014) 15 SCC 30,131,doc_00301,131,131
+0,Dismissed,2018,Karnataka High Court,506,(2018) 4 SCC 131,131,doc_00302,131,131
+1,Accepted,2023,Punjab and Haryana High Court,420,(2023) 9 SCC 371,134,doc_00303,134,134
+0,Dismissed,2020,Supreme Court of India,420,(2020) 4 SCC 412,134,doc_00304,134,134
+1,Accepted,2023,Madras High Court,354,(2023) 15 SCC 8,129,doc_00305,129,129
+0,Dismissed,2013,Madras High Court,420,(2013) 15 SCC 123,132,doc_00306,132,132
+1,Accepted,2017,Punjab and Haryana High Court,506,(2017) 5 SCC 185,134,doc_00307,134,134
+1,Accepted,2022,Calcutta High Court,506,(2022) 15 SCC 105,129,doc_00308,129,129
+0,Dismissed,2019,Punjab and Haryana High Court,307,(2019) 3 SCC 9,135,doc_00309,135,135
+1,Accepted,2013,Karnataka High Court,498A,(2013) 7 SCC 292,130,doc_00310,130,130
+1,Accepted,2014,Calcutta High Court,420,(2014) 11 SCC 379,130,doc_00311,130,130
+0,Dismissed,2012,Calcutta High Court,395,(2012) 9 SCC 251,131,doc_00312,131,131
+0,Dismissed,2023,Supreme Court of India,376,(2023) 1 SCC 392,134,doc_00313,134,134
+0,Dismissed,2011,Karnataka High Court,302,(2011) 4 SCC 259,131,doc_00314,131,131
+1,Accepted,2020,Punjab and Haryana High Court,395,(2020) 8 SCC 9,133,doc_00315,133,133
+1,Accepted,2018,Karnataka High Court,302,(2018) 5 SCC 9,129,doc_00316,129,129
+0,Dismissed,2011,Karnataka High Court,506,(2011) 4 SCC 318,131,doc_00317,131,131
+1,Accepted,2022,Allahabad High Court,506,(2022) 6 SCC 492,131,doc_00318,131,131
+0,Dismissed,2021,Calcutta High Court,392,(2021) 11 SCC 424,132,doc_00319,132,132
+1,Accepted,2016,Supreme Court of India,304B,(2016) 8 SCC 29,132,doc_00320,132,132
+1,Accepted,2023,Bombay High Court,302,(2023) 13 SCC 170,130,doc_00321,130,130
+0,Dismissed,2013,Delhi High Court,354,(2013) 15 SCC 291,132,doc_00322,132,132
+1,Accepted,2020,Allahabad High Court,395,(2020) 10 SCC 337,129,doc_00323,129,129
+0,Dismissed,2013,Bombay High Court,302,(2013) 14 SCC 204,133,doc_00324,133,133
+1,Accepted,2013,Allahabad High Court,304B,(2013) 15 SCC 277,129,doc_00325,129,129
+1,Accepted,2018,Karnataka High Court,307,(2018) 2 SCC 224,129,doc_00326,129,129
+1,Accepted,2022,Delhi High Court,420,(2022) 1 SCC 325,131,doc_00327,131,131
+1,Accepted,2015,Calcutta High Court,498A,(2015) 3 SCC 349,129,doc_00328,129,129
+0,Dismissed,2014,Karnataka High Court,354,(2014) 2 SCC 43,132,doc_00329,132,132
+1,Accepted,2021,Bombay High Court,498A,(2021) 6 SCC 55,129,doc_00330,129,129
+1,Accepted,2015,Supreme Court of India,304B,(2015) 3 SCC 45,132,doc_00331,132,132
+1,Accepted,2018,Karnataka High Court,376,(2018) 1 SCC 46,129,doc_00332,129,129
+1,Accepted,2022,Delhi High Court,307,(2022) 1 SCC 150,130,doc_00333,130,130
+0,Dismissed,2013,Karnataka High Court,392,(2013) 7 SCC 87,132,doc_00334,132,132
+0,Dismissed,2017,Allahabad High Court,376,(2017) 3 SCC 223,132,doc_00335,132,132
+0,Dismissed,2022,Karnataka High Court,498A,(2022) 5 SCC 484,132,doc_00336,132,132
+1,Accepted,2013,Calcutta High Court,420,(2013) 3 SCC 156,130,doc_00337,130,130
+1,Accepted,2016,Karnataka High Court,302,(2016) 6 SCC 221,131,doc_00338,131,131
+0,Dismissed,2019,Bombay High Court,354,(2019) 6 SCC 91,132,doc_00339,132,132
+0,Dismissed,2019,Punjab and Haryana High Court,392,(2019) 7 SCC 144,136,doc_00340,136,136
+0,Dismissed,2013,Punjab and Haryana High Court,392,(2013) 13 SCC 282,136,doc_00341,136,136
+1,Accepted,2022,Calcutta High Court,302,(2022) 2 SCC 420,129,doc_00342,129,129
+1,Accepted,2013,Calcutta High Court,392,(2013) 3 SCC 367,129,doc_00343,129,129
+1,Accepted,2019,Karnataka High Court,392,(2019) 7 SCC 274,130,doc_00344,130,130
+1,Accepted,2022,Karnataka High Court,506,(2022) 15 SCC 416,130,doc_00345,130,130
+1,Accepted,2020,Delhi High Court,506,(2020) 11 SCC 314,130,doc_00346,130,130
+0,Dismissed,2011,Karnataka High Court,302,(2011) 5 SCC 114,133,doc_00347,133,133
+1,Accepted,2016,Madras High Court,506,(2016) 10 SCC 354,129,doc_00348,129,129
+0,Dismissed,2017,Bombay High Court,506,(2017) 7 SCC 472,133,doc_00349,133,133
+1,Accepted,2014,Delhi High Court,304B,(2014) 13 SCC 106,129,doc_00350,129,129
+1,Accepted,2011,Calcutta High Court,506,(2011) 12 SCC 232,131,doc_00351,131,131
+0,Dismissed,2022,Delhi High Court,307,(2022) 14 SCC 176,132,doc_00352,132,132
+0,Dismissed,2012,Bombay High Court,304B,(2012) 9 SCC 219,131,doc_00353,131,131
+1,Accepted,2012,Madras High Court,395,(2012) 1 SCC 378,129,doc_00354,129,129
+1,Accepted,2016,Madras High Court,354,(2016) 12 SCC 110,129,doc_00355,129,129
+0,Dismissed,2011,Allahabad High Court,420,(2011) 6 SCC 101,132,doc_00356,132,132
+1,Accepted,2018,Delhi High Court,395,(2018) 7 SCC 313,130,doc_00357,130,130
+1,Accepted,2023,Delhi High Court,392,(2023) 3 SCC 417,131,doc_00358,131,131
+0,Dismissed,2011,Delhi High Court,498A,(2011) 2 SCC 94,131,doc_00359,131,131
+0,Dismissed,2016,Bombay High Court,307,(2016) 7 SCC 217,132,doc_00360,132,132
+0,Dismissed,2018,Calcutta High Court,376,(2018) 5 SCC 72,132,doc_00361,132,132
+1,Accepted,2010,Punjab and Haryana High Court,376,(2010) 8 SCC 70,133,doc_00362,133,133
+1,Accepted,2020,Karnataka High Court,420,(2020) 11 SCC 252,130,doc_00363,130,130
+0,Dismissed,2011,Calcutta High Court,392,(2011) 5 SCC 17,131,doc_00364,131,131
+1,Accepted,2012,Madras High Court,498A,(2012) 12 SCC 396,130,doc_00365,130,130
+1,Accepted,2014,Delhi High Court,395,(2014) 14 SCC 388,130,doc_00366,130,130
+0,Dismissed,2016,Calcutta High Court,302,(2016) 14 SCC 335,132,doc_00367,132,132
+1,Accepted,2014,Allahabad High Court,420,(2014) 8 SCC 444,129,doc_00368,129,129
+1,Accepted,2021,Madras High Court,304B,(2021) 10 SCC 324,129,doc_00369,129,129
+0,Dismissed,2022,Bombay High Court,392,(2022) 13 SCC 31,132,doc_00370,132,132
+0,Dismissed,2019,Punjab and Haryana High Court,354,(2019) 12 SCC 150,136,doc_00371,136,136
+1,Accepted,2012,Allahabad High Court,498A,(2012) 5 SCC 444,130,doc_00372,130,130
+1,Accepted,2021,Bombay High Court,376,(2021) 13 SCC 432,129,doc_00373,129,129
+1,Accepted,2020,Calcutta High Court,392,(2020) 7 SCC 193,129,doc_00374,129,129
+1,Accepted,2018,Delhi High Court,395,(2018) 15 SCC 450,130,doc_00375,130,130
+0,Dismissed,2019,Calcutta High Court,307,(2019) 2 SCC 375,131,doc_00376,131,131
+0,Dismissed,2016,Punjab and Haryana High Court,395,(2016) 14 SCC 109,136,doc_00377,136,136
+0,Dismissed,2015,Allahabad High Court,395,(2015) 14 SCC 249,133,doc_00378,133,133
+1,Accepted,2020,Supreme Court of India,307,(2020) 2 SCC 476,131,doc_00379,131,131
+0,Dismissed,2016,Calcutta High Court,376,(2016) 15 SCC 68,131,doc_00380,131,131
+1,Accepted,2020,Bombay High Court,498A,(2020) 2 SCC 191,130,doc_00381,130,130
+0,Dismissed,2021,Supreme Court of India,376,(2021) 11 SCC 47,133,doc_00382,133,133
+0,Dismissed,2011,Supreme Court of India,304B,(2011) 4 SCC 266,133,doc_00383,133,133
+0,Dismissed,2023,Supreme Court of India,395,(2023) 12 SCC 68,133,doc_00384,133,133
+0,Dismissed,2011,Delhi High Court,395,(2011) 6 SCC 189,131,doc_00385,131,131
+0,Dismissed,2020,Bombay High Court,498A,(2020) 9 SCC 289,131,doc_00386,131,131
+0,Dismissed,2021,Bombay High Court,302,(2021) 12 SCC 78,131,doc_00387,131,131
+0,Dismissed,2011,Calcutta High Court,392,(2011) 10 SCC 374,131,doc_00388,131,131
+0,Dismissed,2022,Punjab and Haryana High Court,392,(2022) 5 SCC 331,135,doc_00389,135,135
+1,Accepted,2019,Madras High Court,304B,(2019) 1 SCC 435,130,doc_00390,130,130
+0,Dismissed,2018,Madras High Court,498A,(2018) 7 SCC 152,132,doc_00391,132,132
+0,Dismissed,2011,Madras High Court,302,(2011) 11 SCC 305,131,doc_00392,131,131
+1,Accepted,2012,Supreme Court of India,304B,(2012) 7 SCC 188,133,doc_00393,133,133
+0,Dismissed,2010,Bombay High Court,506,(2010) 5 SCC 111,131,doc_00394,131,131
+1,Accepted,2014,Supreme Court of India,302,(2014) 12 SCC 206,131,doc_00395,131,131
+0,Dismissed,2014,Bombay High Court,304B,(2014) 15 SCC 105,132,doc_00396,132,132
+0,Dismissed,2020,Punjab and Haryana High Court,376,(2020) 12 SCC 224,135,doc_00397,135,135
+0,Dismissed,2016,Supreme Court of India,420,(2016) 10 SCC 312,133,doc_00398,133,133
+0,Dismissed,2010,Allahabad High Court,302,(2010) 1 SCC 84,131,doc_00399,131,131
+1,Accepted,2022,Punjab and Haryana High Court,395,(2022) 6 SCC 65,134,doc_00400,134,134
+1,Accepted,2022,Delhi High Court,498A,(2022) 9 SCC 33,129,doc_00401,129,129
+1,Accepted,2018,Delhi High Court,498A,(2018) 8 SCC 440,129,doc_00402,129,129
+0,Dismissed,2014,Bombay High Court,354,(2014) 11 SCC 371,133,doc_00403,133,133
+0,Dismissed,2010,Madras High Court,304B,(2010) 1 SCC 242,132,doc_00404,132,132
+0,Dismissed,2023,Karnataka High Court,307,(2023) 13 SCC 468,131,doc_00405,131,131
+1,Accepted,2016,Madras High Court,392,(2016) 14 SCC 40,131,doc_00406,131,131
+0,Dismissed,2020,Punjab and Haryana High Court,354,(2020) 4 SCC 412,136,doc_00407,136,136
+1,Accepted,2017,Supreme Court of India,506,(2017) 6 SCC 45,131,doc_00408,131,131
+1,Accepted,2013,Calcutta High Court,506,(2013) 13 SCC 156,129,doc_00409,129,129
+1,Accepted,2019,Madras High Court,354,(2019) 12 SCC 462,129,doc_00410,129,129
+0,Dismissed,2016,Madras High Court,506,(2016) 9 SCC 178,131,doc_00411,131,131
+1,Accepted,2023,Punjab and Haryana High Court,302,(2023) 4 SCC 272,133,doc_00412,133,133
+1,Accepted,2012,Karnataka High Court,420,(2012) 1 SCC 472,129,doc_00413,129,129
+0,Dismissed,2021,Karnataka High Court,420,(2021) 2 SCC 259,133,doc_00414,133,133
+0,Dismissed,2019,Karnataka High Court,376,(2019) 11 SCC 494,132,doc_00415,132,132
+1,Accepted,2023,Madras High Court,376,(2023) 12 SCC 426,130,doc_00416,130,130
+0,Dismissed,2013,Punjab and Haryana High Court,307,(2013) 3 SCC 400,135,doc_00417,135,135
+1,Accepted,2012,Delhi High Court,354,(2012) 6 SCC 209,129,doc_00418,129,129
+1,Accepted,2014,Punjab and Haryana High Court,304B,(2014) 14 SCC 62,133,doc_00419,133,133
+0,Dismissed,2010,Bombay High Court,304B,(2010) 3 SCC 47,132,doc_00420,132,132
+1,Accepted,2010,Punjab and Haryana High Court,420,(2010) 14 SCC 90,133,doc_00421,133,133
+0,Dismissed,2021,Karnataka High Court,302,(2021) 8 SCC 53,131,doc_00422,131,131
+0,Dismissed,2023,Delhi High Court,376,(2023) 4 SCC 422,131,doc_00423,131,131
+1,Accepted,2019,Punjab and Haryana High Court,392,(2019) 1 SCC 34,134,doc_00424,134,134
+1,Accepted,2023,Calcutta High Court,420,(2023) 1 SCC 483,129,doc_00425,129,129
+1,Accepted,2016,Supreme Court of India,395,(2016) 1 SCC 196,131,doc_00426,131,131
+1,Accepted,2012,Bombay High Court,392,(2012) 8 SCC 453,131,doc_00427,131,131
+0,Dismissed,2019,Supreme Court of India,376,(2019) 5 SCC 256,134,doc_00428,134,134
+1,Accepted,2014,Calcutta High Court,392,(2014) 7 SCC 103,129,doc_00429,129,129
+1,Accepted,2016,Madras High Court,506,(2016) 9 SCC 401,130,doc_00430,130,130
+1,Accepted,2015,Punjab and Haryana High Court,395,(2015) 3 SCC 14,134,doc_00431,134,134
+1,Accepted,2010,Madras High Court,307,(2010) 6 SCC 393,129,doc_00432,129,129
+0,Dismissed,2013,Madras High Court,354,(2013) 9 SCC 418,131,doc_00433,131,131
+0,Dismissed,2015,Madras High Court,302,(2015) 4 SCC 304,132,doc_00434,132,132
+1,Accepted,2021,Punjab and Haryana High Court,307,(2021) 10 SCC 73,134,doc_00435,134,134
+0,Dismissed,2014,Madras High Court,354,(2014) 1 SCC 47,131,doc_00436,131,131
+1,Accepted,2010,Madras High Court,302,(2010) 6 SCC 470,130,doc_00437,130,130
+0,Dismissed,2021,Madras High Court,354,(2021) 1 SCC 12,131,doc_00438,131,131
+1,Accepted,2023,Bombay High Court,376,(2023) 6 SCC 361,130,doc_00439,130,130
+0,Dismissed,2015,Delhi High Court,392,(2015) 12 SCC 486,133,doc_00440,133,133
+1,Accepted,2021,Calcutta High Court,392,(2021) 11 SCC 302,131,doc_00441,131,131
+0,Dismissed,2012,Karnataka High Court,376,(2012) 1 SCC 486,132,doc_00442,132,132
+1,Accepted,2012,Karnataka High Court,354,(2012) 4 SCC 328,130,doc_00443,130,130
+0,Dismissed,2015,Delhi High Court,354,(2015) 6 SCC 164,131,doc_00444,131,131
+1,Accepted,2010,Delhi High Court,376,(2010) 4 SCC 355,131,doc_00445,131,131
+0,Dismissed,2021,Punjab and Haryana High Court,304B,(2021) 7 SCC 225,136,doc_00446,136,136
+1,Accepted,2016,Bombay High Court,392,(2016) 7 SCC 52,129,doc_00447,129,129
+0,Dismissed,2011,Madras High Court,395,(2011) 1 SCC 164,131,doc_00448,131,131
+1,Accepted,2012,Delhi High Court,498A,(2012) 12 SCC 39,130,doc_00449,130,130
+1,Accepted,2019,Delhi High Court,506,(2019) 1 SCC 221,131,doc_00450,131,131
+1,Accepted,2011,Karnataka High Court,376,(2011) 4 SCC 210,129,doc_00451,129,129
+0,Dismissed,2013,Allahabad High Court,506,(2013) 7 SCC 293,132,doc_00452,132,132
+0,Dismissed,2015,Calcutta High Court,506,(2015) 2 SCC 151,131,doc_00453,131,131
+0,Dismissed,2010,Calcutta High Court,354,(2010) 11 SCC 150,131,doc_00454,131,131
+1,Accepted,2022,Calcutta High Court,304B,(2022) 8 SCC 459,130,doc_00455,130,130
+1,Accepted,2012,Delhi High Court,498A,(2012) 6 SCC 96,130,doc_00456,130,130
+1,Accepted,2017,Supreme Court of India,395,(2017) 14 SCC 138,132,doc_00457,132,132
+1,Accepted,2011,Supreme Court of India,354,(2011) 7 SCC 498,131,doc_00458,131,131
+1,Accepted,2023,Madras High Court,354,(2023) 7 SCC 495,130,doc_00459,130,130
+1,Accepted,2017,Calcutta High Court,506,(2017) 7 SCC 463,130,doc_00460,130,130
+0,Dismissed,2012,Bombay High Court,302,(2012) 13 SCC 99,132,doc_00461,132,132
+1,Accepted,2020,Supreme Court of India,376,(2020) 14 SCC 322,131,doc_00462,131,131
+1,Accepted,2011,Allahabad High Court,376,(2011) 7 SCC 283,131,doc_00463,131,131
+0,Dismissed,2023,Allahabad High Court,307,(2023) 10 SCC 301,132,doc_00464,132,132
+0,Dismissed,2012,Karnataka High Court,506,(2012) 10 SCC 299,132,doc_00465,132,132
+1,Accepted,2022,Delhi High Court,304B,(2022) 15 SCC 177,130,doc_00466,130,130
+1,Accepted,2019,Allahabad High Court,392,(2019) 3 SCC 142,129,doc_00467,129,129
+1,Accepted,2020,Bombay High Court,392,(2020) 7 SCC 456,130,doc_00468,130,130
+1,Accepted,2014,Madras High Court,307,(2014) 6 SCC 419,129,doc_00469,129,129
+0,Dismissed,2023,Allahabad High Court,498A,(2023) 3 SCC 154,132,doc_00470,132,132
+0,Dismissed,2019,Punjab and Haryana High Court,395,(2019) 8 SCC 109,136,doc_00471,136,136
+0,Dismissed,2023,Calcutta High Court,392,(2023) 13 SCC 82,132,doc_00472,132,132
+0,Dismissed,2012,Allahabad High Court,304B,(2012) 4 SCC 449,132,doc_00473,132,132
+0,Dismissed,2017,Supreme Court of India,420,(2017) 12 SCC 102,133,doc_00474,133,133
+0,Dismissed,2016,Punjab and Haryana High Court,498A,(2016) 1 SCC 124,135,doc_00475,135,135
+1,Accepted,2012,Calcutta High Court,307,(2012) 9 SCC 180,130,doc_00476,130,130
+0,Dismissed,2014,Bombay High Court,307,(2014) 1 SCC 84,132,doc_00477,132,132
+0,Dismissed,2020,Madras High Court,354,(2020) 11 SCC 210,131,doc_00478,131,131
+0,Dismissed,2012,Supreme Court of India,506,(2012) 13 SCC 5,133,doc_00479,133,133
+1,Accepted,2021,Allahabad High Court,420,(2021) 15 SCC 193,130,doc_00480,130,130
+1,Accepted,2017,Calcutta High Court,307,(2017) 9 SCC 423,130,doc_00481,130,130
+1,Accepted,2010,Karnataka High Court,354,(2010) 11 SCC 305,130,doc_00482,130,130
+0,Dismissed,2017,Allahabad High Court,354,(2017) 5 SCC 328,132,doc_00483,132,132
+0,Dismissed,2013,Allahabad High Court,307,(2013) 13 SCC 124,132,doc_00484,132,132
+0,Dismissed,2021,Karnataka High Court,302,(2021) 8 SCC 152,133,doc_00485,133,133
+0,Dismissed,2021,Karnataka High Court,498A,(2021) 12 SCC 293,131,doc_00486,131,131
+1,Accepted,2020,Punjab and Haryana High Court,420,(2020) 6 SCC 260,133,doc_00487,133,133
+0,Dismissed,2014,Bombay High Court,498A,(2014) 3 SCC 380,132,doc_00488,132,132
+1,Accepted,2013,Bombay High Court,498A,(2013) 12 SCC 447,131,doc_00489,131,131
+1,Accepted,2014,Karnataka High Court,498A,(2014) 14 SCC 61,131,doc_00490,131,131
+0,Dismissed,2019,Supreme Court of India,395,(2019) 15 SCC 100,134,doc_00491,134,134
+1,Accepted,2014,Delhi High Court,506,(2014) 14 SCC 438,129,doc_00492,129,129
+1,Accepted,2016,Bombay High Court,376,(2016) 6 SCC 442,129,doc_00493,129,129
+0,Dismissed,2020,Delhi High Court,376,(2020) 11 SCC 30,131,doc_00494,131,131
+0,Dismissed,2022,Calcutta High Court,302,(2022) 13 SCC 82,132,doc_00495,132,132
+1,Accepted,2016,Delhi High Court,395,(2016) 7 SCC 495,129,doc_00496,129,129
+0,Dismissed,2018,Karnataka High Court,395,(2018) 6 SCC 487,131,doc_00497,131,131
+0,Dismissed,2010,Punjab and Haryana High Court,302,(2010) 12 SCC 128,136,doc_00498,136,136
+1,Accepted,2011,Punjab and Haryana High Court,420,(2011) 10 SCC 157,134,doc_00499,134,134

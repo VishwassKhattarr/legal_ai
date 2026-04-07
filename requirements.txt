@@ -1,0 +1,7 @@
+kagglehub
+pandas
+tqdm
+scikit-learn
+transformers
+torch
+flask

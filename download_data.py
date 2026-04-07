@@ -1,64 +1,47 @@
 """
 download_data.py
 ================
-ILDC dataset download karta hai HuggingFace se.
-Run: python download_data.py
+AILA dataset Kaggle se download karta hai.
+Setup: kaggle.json ~/.kaggle/ mein rakhna padega
+Run:   python download_data.py
 """
 
-from datasets import load_dataset
+import kagglehub
 import os
-import json
-from tqdm import tqdm
+import shutil
+from pathlib import Path
 
 print("=" * 50)
-print("  INDIAN LEGAL AI — Dataset Download")
+print("  INDIAN LEGAL AI — Dataset Download (AILA)")
 print("=" * 50)
 
-# Output folder
 os.makedirs("data/raw", exist_ok=True)
 
-print("\n[1/3] ILDC dataset download ho raha hai...")
-print("      (pehli baar thoda time lagega ~500MB)\n")
+print("\n[1/2] Kaggle se AILA dataset download ho raha hai...")
+print("      (pehli baar ~200MB download hoga)\n")
 
 try:
-    # ILDC Single — judgment prediction dataset
-    dataset = load_dataset("Exploration-Lab/ILDC", "ILDC_single")
+    path = kagglehub.dataset_download("ananyapam7/legalai")
+    print(f"\n[2/2] Downloaded to cache: {path}")
 
-    print(f"\n[2/3] Dataset info:")
-    print(f"      Train samples : {len(dataset['train'])}")
-    print(f"      Test samples  : {len(dataset['test'])}")
-    print(f"      Columns       : {dataset['train'].column_names}")
+    # Files apne project mein copy karo
+    src = Path(path)
+    dst = Path("data/raw")
 
-    print("\n[3/3] Saving to data/raw/ ...")
+    for f in src.rglob("*"):
+        if f.is_file():
+            rel = f.relative_to(src)
+            target = dst / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, target)
+            print(f"      Copied: {rel}")
 
-    # Save train
-    train_records = []
-    for item in tqdm(dataset['train'], desc="Saving train"):
-        train_records.append({
-            "text"  : item['text'],
-            "label" : item['label'],   # 0 = dismissed, 1 = accepted
-        })
-
-    with open("data/raw/train.json", "w", encoding="utf-8") as f:
-        json.dump(train_records, f, ensure_ascii=False, indent=2)
-
-    # Save test
-    test_records = []
-    for item in tqdm(dataset['test'], desc="Saving test"):
-        test_records.append({
-            "text"  : item['text'],
-            "label" : item['label'],
-        })
-
-    with open("data/raw/test.json", "w", encoding="utf-8") as f:
-        json.dump(test_records, f, ensure_ascii=False, indent=2)
-
-    print(f"\n Done! Files saved:")
-    print(f"   data/raw/train.json  ({len(train_records)} cases)")
-    print(f"   data/raw/test.json   ({len(test_records)} cases)")
-    print(f"\nAb run karo: python preprocess.py")
+    print(f"\n Done! Files saved to data/raw/")
+    print("      Ab run karo: python preprocess.py")
 
 except Exception as e:
     print(f"\n Error: {e}")
-    print("   Internet check karo ya HuggingFace account se login karo:")
-    print("   huggingface-cli login")
+    print("\n Kaggle API setup karo:")
+    print("   1. kaggle.com/settings → API → Generate New Token")
+    print("   2. kaggle.json ko C:/Users/<aapka_naam>/.kaggle/ mein rakho")
+    print("   3. pip install kagglehub")
