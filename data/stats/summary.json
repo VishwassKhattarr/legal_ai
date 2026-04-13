@@ -1,7 +1,13 @@
 {
-  "total_documents": 500,
-  "total_chunks": 3500,
-  "avg_words_per_doc": 131.3,
-  "label_0_dismissed": 236,
-  "label_1_accepted": 264
+  "data_source": "AILA FIRE 2019",
+  "total_cases": 2914,
+  "total_queries": 50,
+  "total_statutes": 197,
+  "total_chunks": 23727,
+  "prior_relevance_pairs": 437100,
+  "statute_relevance_pairs": 29562,
+  "avg_case_words": 3428.9,
+  "avg_query_words": 517.4,
+  "chunk_size": 512,
+  "chunk_overlap": 50
 }
