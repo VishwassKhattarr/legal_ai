@@ -117,16 +117,20 @@ for _, row in tqdm(queries_df.iterrows(), total=len(queries_df),
         ))
 
         # Negative pairs — random cases jo relevant nahi hain
-        neg_ids = random.sample(
-            [c for c in all_case_ids if c not in pos_cases],
-            min(CONFIG["neg_per_query"], len(all_case_ids) - len(pos_cases))
-        )
-        for neg_id in neg_ids:
-            neg_text = truncate(case_dict[neg_id])
-            train_examples.append(InputExample(
-                texts  = [query_text, neg_text],
-                label  = 0.0
-            ))
+    neg_pool = [c for c in all_case_ids if c not in pos_cases]
+
+if len(neg_pool) > 0:
+    neg_ids = random.sample(
+        neg_pool,
+        min(CONFIG["neg_per_query"], len(neg_pool))
+    )
+
+    for neg_id in neg_ids:
+        neg_text = truncate(case_dict[neg_id])
+        train_examples.append(InputExample(
+            texts  = [query_text, neg_text],
+            label  = 0.0
+        ))
 
 # ── Statute retrieval pairs ───────────────────────────────
 all_statute_ids = list(statute_dict.keys())
@@ -151,16 +155,20 @@ for _, row in tqdm(queries_df.iterrows(), total=len(queries_df),
             label = 1.0
         ))
 
-        neg_ids = random.sample(
-            [s for s in all_statute_ids if s not in pos_statutes],
-            min(3, len(all_statute_ids) - len(pos_statutes))
-        )
-        for neg_id in neg_ids:
-            neg_text = truncate(statute_dict[neg_id], max_words=100)
-            train_examples.append(InputExample(
-                texts = [query_text, neg_text],
-                label = 0.0
-            ))
+    neg_pool = [s for s in all_statute_ids if s not in pos_statutes]
+
+if len(neg_pool) > 0:
+    neg_ids = random.sample(
+        neg_pool,
+        min(3, len(neg_pool))
+    )
+
+    for neg_id in neg_ids:
+        neg_text = truncate(statute_dict[neg_id], max_words=100)
+        train_examples.append(InputExample(
+            texts = [query_text, neg_text],
+            label = 0.0
+        ))
 
 # Shuffle
 random.shuffle(train_examples)
