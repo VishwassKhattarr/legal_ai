@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+data/
+embeddings.npy
+faiss_index.bin
+
+.vscode/

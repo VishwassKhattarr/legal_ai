@@ -103,16 +103,25 @@ print("\n[2/4] Queries load ho rahi hain...")
 queries = []
 query_file = RAW / "Query_doc.txt"
 raw_q = read_txt(query_file)
+print(raw_q[:500])
 
 for line in raw_q.splitlines():
     line = line.strip()
-    if not line or '||' not in line:
+    if not line:
         continue
-    parts = line.split('||', 1)
-    if len(parts) != 2:
-        continue
-    query_id = parts[0].strip()
-    text     = parts[1].strip()
+
+    parts = line.split('||')
+
+    if len(parts) == 2:
+        query_id = parts[0].strip()
+        text = parts[1].strip()
+    else:
+        parts = line.split(maxsplit=1)
+        if len(parts) != 2:
+            continue
+        query_id = parts[0].strip()
+        text = parts[1].strip()
+
     if len(text) > 30:
         cleaned = clean_text(text)
         queries.append({
