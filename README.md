@@ -1,10 +1,10 @@
-# ⚖️ AI Legal Assistant (Indian Case Law)
+#  AI Legal Assistant (Indian Case Law)
 
 An AI-based legal assistant system for analyzing and retrieving relevant Indian legal case laws using NLP and transformer-based models.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Semantic search using Sentence Transformers
 - Fast retrieval with FAISS vector index
@@ -15,7 +15,7 @@ An AI-based legal assistant system for analyzing and retrieving relevant Indian 
 
 ---
 
-## 🧠 Tech Stack
+##  Tech Stack
 
 - Python
 - Sentence Transformers (BERT-based models)
@@ -24,7 +24,7 @@ An AI-based legal assistant system for analyzing and retrieving relevant Indian 
 
 ---
 
-## 🔄 Pipeline
+##  Pipeline
 
 Query  
 → Query Expansion  
@@ -36,7 +36,7 @@ Query
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 ```bash
 pip install -r requirements.txt
