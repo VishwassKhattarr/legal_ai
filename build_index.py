@@ -31,4 +31,4 @@ print("Saving index...")
 faiss.write_index(index, "faiss_index.bin")
 np.save("embeddings.npy", embeddings)
 
-print("DONE ✅")
+print("DONE ")
