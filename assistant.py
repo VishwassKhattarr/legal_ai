@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer, CrossEncoder
 
 # ── Config ───────────────────────────────────────────────────────────────────
 INDEX_DIR  = "faiss_indexes"
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = "models/finetuned_legal_bert"
 
 # ── Load models ───────────────────────────────────────────────────────────────
 print("Loading models...")
@@ -32,62 +32,51 @@ for role in ROLES:
 print(f"Loaded {len(indexes)} indexes ✅\n")
 
 
-# ── Intent Detection → Role Mapping ──────────────────────────────────────────
+# ── Intent Detection ──────────────────────────────────────────────────────────
 def detect_intent(query):
     q = query.lower()
 
-    # Bail / arrest / custody → look at final rulings + reasoning
     if any(w in q for w in ["bail", "anticipatory bail", "custody",
                               "arrest", "remand", "detention"]):
         return ["RPC", "RATIO"]
 
-    # Murder / death / homicide → facts + ruling + reasoning
     if any(w in q for w in ["murder", "homicide", "culpable", "killing",
                               "death", "accidental", "manslaughter"]):
         return ["RPC", "RATIO", "FAC"]
 
-    # Rape / sexual assault
     if any(w in q for w in ["rape", "sexual assault", "molestation",
                               "sexual offence", "pocso"]):
         return ["RPC", "RATIO", "FAC"]
 
-    # Fraud / cheating / financial crime
     if any(w in q for w in ["fraud", "cheating", "forgery",
                               "embezzlement", "misappropriation"]):
-        return ["RPC", "RATIO", "STA"]
+        return ["RPC", "RATIO", "STA", "ALL"]
 
-    # What law applies / which section
     if any(w in q for w in ["which section", "what law", "which act",
                               "applicable law", "legal provision",
                               "what does ipc", "under which"]):
         return ["STA", "ISSUE"]
 
-    # Divorce / matrimonial
     if any(w in q for w in ["divorce", "maintenance", "alimony",
                               "matrimonial", "husband", "wife", "dowry"]):
         return ["RPC", "RATIO", "FAC"]
 
-    # Property / land
     if any(w in q for w in ["property", "land", "possession",
                               "title", "ownership", "eviction"]):
         return ["RPC", "RATIO", "FAC"]
 
-    # What happened in the case / facts
     if any(w in q for w in ["what happened", "facts of", "background",
                               "story", "incident", "events"]):
         return ["FAC"]
 
-    # Precedent / prior case
     if any(w in q for w in ["precedent", "prior case", "previous judgment",
                               "earlier ruling", "similar case"]):
         return ["PRE_RELIED"]
 
-    # Lower court / appeal
     if any(w in q for w in ["lower court", "high court", "sessions court",
                               "appeal from", "trial court"]):
         return ["RLC"]
 
-    # Default → full index
     return ["ALL"]
 
 
@@ -103,20 +92,19 @@ def search_and_rerank(query, top_k=5, initial_k=20):
     query_embedding = bi_encoder.encode([query])
     query_embedding = np.array(query_embedding).astype("float32")
 
-    ipc      = extract_ipc_section(query)
-    roles    = detect_intent(query)
-    seen_docs = set()
-    candidates = []
+    ipc           = extract_ipc_section(query)
+    roles         = detect_intent(query)
+    seen_docs     = set()
+    candidates    = []
     candidate_meta = []
 
-    # Search role-specific indexes first
     for role in roles:
         if role not in indexes:
             continue
-        idx      = indexes[role]
-        role_df  = meta[role]
-        k        = min(initial_k, idx.ntotal)
-        _, idxs  = idx.search(query_embedding, k)
+        idx     = indexes[role]
+        role_df = meta[role]
+        k       = min(initial_k, idx.ntotal)
+        _, idxs = idx.search(query_embedding, k)
 
         for i in idxs[0]:
             if i < 0 or i >= len(role_df):
@@ -128,7 +116,6 @@ def search_and_rerank(query, top_k=5, initial_k=20):
             seen_docs.add(doc_id)
             text = row["text"]
 
-            # IPC filter if section detected
             if ipc:
                 if str(ipc) not in text:
                     continue
@@ -136,11 +123,11 @@ def search_and_rerank(query, top_k=5, initial_k=20):
             candidates.append(text)
             candidate_meta.append((doc_id, row["doc_type"], role))
 
-    # Fallback to full index if not enough candidates
+    # Fallback
     if len(candidates) < top_k:
-        idx     = indexes["ALL"]
-        all_df  = meta["ALL"]
-        k       = min(initial_k * 2, idx.ntotal)
+        idx    = indexes["ALL"]
+        all_df = meta["ALL"]
+        k      = min(initial_k * 2, idx.ntotal)
         _, idxs = idx.search(query_embedding, k)
 
         for i in idxs[0]:
@@ -161,11 +148,28 @@ def search_and_rerank(query, top_k=5, initial_k=20):
     pairs  = [[query, doc] for doc in candidates]
     scores = cross_encoder.predict(pairs)
 
-    ranked = sorted(
-        zip(candidates, scores, candidate_meta),
-        key=lambda x: x[1],
-        reverse=True
-    )
+    # Keyword boosting
+    q = query.lower()
+    boost_keywords = []
+    if any(w in q for w in ["cheating", "fraud", "420"]):
+        boost_keywords = ["420", "cheating", "fraud", "deceiv", "dishonest"]
+    elif any(w in q for w in ["bail", "anticipatory"]):
+        boost_keywords = ["bail", "anticipatory", "granted", "custody"]
+    elif any(w in q for w in ["murder", "homicide", "accidental"]):
+        boost_keywords = ["302", "304", "304a", "murder", "homicide", "accidental"]
+    elif any(w in q for w in ["rape", "sexual"]):
+        boost_keywords = ["376", "rape", "sexual", "penetration", "victim"]
+
+    adjusted = []
+    for text, score, m in zip(candidates, scores, candidate_meta):
+        boost = 0
+        if boost_keywords:
+            text_lower = text.lower()
+            matches    = sum(1 for kw in boost_keywords if kw in text_lower)
+            boost      = matches * 0.3
+        adjusted.append((text, score + boost, m))
+
+    ranked = sorted(adjusted, key=lambda x: x[1], reverse=True)
     return ranked[:top_k]
 
 
@@ -177,35 +181,76 @@ def generate_answer(query, results):
     negative = sum("rejected" in t or "denied" in t or "dismissed" in t for t in texts)
 
     if positive > negative:
-        trend = "courts have granted relief in several similar cases"
+        trend = "courts have generally granted relief in similar cases"
     elif negative > positive:
-        trend = "courts have denied relief in many similar cases"
+        trend = "courts have generally denied relief in similar cases"
     else:
-        trend = "courts show mixed decisions depending on circumstances"
+        trend = "courts show mixed decisions in similar cases"
 
-    combined = " ".join(texts[:3])
-    keywords_map = {
-        "delay"        : "delay in proceedings",
-        "evidence"     : "strength of evidence",
-        "condition"    : "legal conditions",
-        "serious"      : "seriousness of offence",
-        "custody"      : "custodial requirements",
-        "investigation": "stage of investigation",
-        "charge"       : "nature of charges",
-        "appeal"       : "procedural history",
-        "accident"     : "accidental nature of offence",
-        "intention"    : "criminal intention",
-        "negligence"   : "negligence of the accused"
-    }
-    signals = [v for k, v in keywords_map.items() if k in combined]
-    signal_text = ", ".join(signals) if signals else "case-specific factors"
+    # Extract specific principles from RATIO/RPC chunks
+    principles = []
+    for text, score, (doc_id, doc_type, role) in results:
+        if role in ["RATIO", "RPC"]:
+            sentences = text.lower().replace("\n", " ").split(".")
+            for sent in sentences:
+                sent = sent.strip()
+                if len(sent) < 30:
+                    continue
+                if any(w in sent for w in [
+                    "court held", "it was held", "we hold",
+                    "it is settled", "the principle",
+                    "bail", "conviction", "acquitt",
+                    "section 302", "section 304", "section 376", "section 420",
+                    "granted", "denied", "dismissed", "allowed",
+                    "cheating", "murder", "rape", "homicide",
+                    "intention", "negligence", "evidence"
+                ]):
+                    principles.append(sent[:200])
+                if len(principles) >= 3:
+                    break
+        if len(principles) >= 3:
+            break
 
-    return f"""
-🧠 Answer:
-Based on the retrieved legal cases, {trend}.
-Courts typically consider factors such as {signal_text} when making decisions.
-The outcome depends on judicial discretion and the specific facts of each case.
-"""
+    q = query.lower()
+
+    if any(w in q for w in ["bail", "anticipatory", "custody", "arrest"]):
+        intro   = "Regarding bail in this type of case"
+        factors = "courts examine: (1) prima facie case against the accused, (2) nature and gravity of the offence, (3) likelihood of fleeing justice, (4) tampering with evidence, and (5) criminal antecedents of the accused."
+
+    elif any(w in q for w in ["murder", "homicide", "culpable", "accidental", "killing"]):
+        intro   = "In cases involving murder or culpable homicide"
+        factors = "courts distinguish between IPC Section 302 (murder with intention), Section 304 (culpable homicide not amounting to murder), and Section 304A (death by negligence). The key factor is criminal intention (mens rea)."
+
+    elif any(w in q for w in ["rape", "sexual", "assault", "pocso"]):
+        intro   = "In rape and sexual assault cases"
+        factors = "courts apply IPC Section 376. Conviction typically rests on the sole testimony of the victim if found credible. Corroboration is not mandatory but desirable."
+
+    elif any(w in q for w in ["cheating", "fraud", "420", "forgery"]):
+        intro   = "In cheating and fraud cases"
+        factors = "courts apply IPC Section 420. The essential ingredients are: (1) deception of a person, (2) fraudulent or dishonest inducement, and (3) delivery of property or alteration of a valuable document."
+
+    elif any(w in q for w in ["dowry", "matrimonial", "divorce", "maintenance"]):
+        intro   = "In matrimonial and dowry cases"
+        factors = "courts apply IPC Section 498A (cruelty) and Section 304B (dowry death). Both physical and mental cruelty are recognized."
+
+    elif any(w in q for w in ["property", "land", "possession", "title"]):
+        intro   = "In property dispute cases"
+        factors = "courts examine title documents, possession records, and chain of ownership. Limitation periods are strictly applied."
+
+    else:
+        intro   = "Based on the retrieved legal cases"
+        factors = "courts examine the specific facts, evidence, applicable statutes, and relevant precedents before arriving at a decision."
+
+    answer  = f"\n🧠 Answer:\n"
+    answer += f"{intro}, {trend}.\n\n"
+    answer += f"⚖️  Legal Position: {factors}\n"
+
+    if principles:
+        answer += f"\n📋 Key Legal Principles from Retrieved Cases:\n"
+        for i, p in enumerate(principles, 1):
+            answer += f"   {i}. {p.strip().capitalize()}.\n"
+
+    return answer
 
 
 # ── Decision Support ──────────────────────────────────────────────────────────
@@ -241,25 +286,25 @@ ROLE_EXPLANATIONS = {
 }
 
 def explain(text, role):
-    t = text.lower()
+    t       = text.lower()
     reasons = []
 
     role_desc = ROLE_EXPLANATIONS.get(role, "Legal content")
     reasons.append(f"[{role}] {role_desc}")
 
-    if "bail"         in t: reasons.append("Discusses bail")
-    if "ipc"          in t: reasons.append("Refers to IPC section")
-    if "murder"       in t or "homicide" in t: reasons.append("Discusses homicide/murder")
-    if "accident"     in t or "negligence" in t: reasons.append("Mentions accidental death")
-    if "granted"      in t or "allowed"   in t: reasons.append("Relief was granted")
-    if "dismissed"    in t or "rejected"  in t: reasons.append("Relief was denied")
-    if "conviction"   in t: reasons.append("Discusses conviction")
-    if "acquittal"    in t: reasons.append("Discusses acquittal")
-    if "section 302"  in t: reasons.append("IPC 302 — Murder")
-    if "section 304"  in t: reasons.append("IPC 304 — Culpable homicide")
-    if "section 304a" in t: reasons.append("IPC 304A — Death by negligence")
-    if "section 376"  in t: reasons.append("IPC 376 — Rape")
-    if "section 420"  in t: reasons.append("IPC 420 — Cheating")
+    if "bail"          in t: reasons.append("Discusses bail")
+    if "ipc"           in t: reasons.append("Refers to IPC section")
+    if "murder"        in t or "homicide" in t: reasons.append("Discusses homicide/murder")
+    if "accident"      in t or "negligence" in t: reasons.append("Mentions accidental death")
+    if "granted"       in t or "allowed"   in t: reasons.append("Relief was granted")
+    if "dismissed"     in t or "rejected"  in t: reasons.append("Relief was denied")
+    if "conviction"    in t: reasons.append("Discusses conviction")
+    if "acquittal"     in t: reasons.append("Discusses acquittal")
+    if "cheating"      in t or "420"       in t: reasons.append("IPC 420 — Cheating")
+    if "section 302"   in t: reasons.append("IPC 302 — Murder")
+    if "section 304"   in t: reasons.append("IPC 304 — Culpable homicide")
+    if "section 304a"  in t: reasons.append("IPC 304A — Death by negligence")
+    if "section 376"   in t: reasons.append("IPC 376 — Rape")
 
     return " | ".join(reasons)
 
@@ -274,12 +319,10 @@ def main():
         if not query:
             continue
 
-        # Show detected intent
         roles = detect_intent(query)
         print(f"\n🎯 Detected intent → searching indexes: {roles}")
 
-        expanded = query + " " + " ".join(roles)
-        results  = search_and_rerank(query)
+        results = search_and_rerank(query)
 
         if not results:
             print("No relevant cases found. Try rephrasing your query.")

@@ -11,7 +11,7 @@ from tqdm import tqdm
 TAGGED_PATH  = "data/chunks/chunks_tagged.csv"
 INDEX_DIR    = "faiss_indexes"
 BATCH_SIZE   = 64
-MODEL_NAME   = "all-MiniLM-L6-v2"
+MODEL_NAME = "models/finetuned_legal_bert"
 
 # Roles we want separate indexes for
 # (skip NONE and very small roles for now)

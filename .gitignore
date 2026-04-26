@@ -1,10 +1,36 @@
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 
-data/
-embeddings.npy
-faiss_index.bin
+# Virtual environments
+venv/
+env/
+.env/
 
+# VS Code
 .vscode/
+
+# Large binary files — do not push
+*.npy
+*.bin
+faiss_index.bin
+embeddings.npy
+checkpoints/
+
+# Model weights — too large for GitHub
+models/finetuned_legal_bert/
+models/finetuned_crossencoder/
+
+# Training data — too large
+data/training/
+data/chunks/chunks.csv
+data/chunks/chunks_tagged.csv
+
+# Kaggle
+kaggle.json
+
+# OS
+.DS_Store
+Thumbs.db
+faiss_indexes/
