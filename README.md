@@ -93,7 +93,7 @@ legal_ai/
 
 ## ⚙️ Setup & Run
 
-### 1. Clone the repo
+### 1. Clone the repo   
 ```bash
 git clone https://github.com/VishwassKhattarr/legal_ai.git
 cd legal_ai
@@ -129,6 +129,25 @@ python assistant.py
 ```
 
 ---
+## 🤖 Pretrained Model
+
+The fine-tuned InLegalBERT model is available on Hugging Face:
+
+👉 **[Sayyam9/legal-bert-aila-finetuned](https://huggingface.co/Sayyam9/legal-bert-aila-finetuned)**
+
+To use it directly without training:
+```python
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer("Sayyam9/legal-bert-aila-finetuned")
+```
+
+Or in `assistant.py`, set:
+```python
+MODEL_NAME = "Sayyam9/legal-bert-aila-finetuned"
+```
+
+## 📊 Model Performance
+...
 
 ## 📊 Model Performance
 
