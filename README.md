@@ -131,19 +131,16 @@ python assistant.py
 ---
 ## 🤖 Pretrained Model
 
-The fine-tuned InLegalBERT model is available on Hugging Face:
+The fine-tuned InLegalBERT model is available on Hugging Face — no training needed!
 
 👉 **[Sayyam9/legal-bert-aila-finetuned](https://huggingface.co/Sayyam9/legal-bert-aila-finetuned)**
 
-To use it directly without training:
-```python
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer("Sayyam9/legal-bert-aila-finetuned")
-```
-
-Or in `assistant.py`, set:
+To use it directly in `assistant.py`, set:
 ```python
 MODEL_NAME = "Sayyam9/legal-bert-aila-finetuned"
+```
+
+---
 ```
 
 ## 📊 Model Performance
