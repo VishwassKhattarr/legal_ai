@@ -11,7 +11,7 @@ from tqdm import tqdm
 TAGGED_PATH  = "data/chunks/chunks_tagged.csv"
 INDEX_DIR    = "faiss_indexes"
 BATCH_SIZE   = 64
-MODEL_NAME = "models/finetuned_legal_bert"
+MODEL_NAME = "Sayyam9/legal-bert-aila-finetuned"
 
 # Roles we want separate indexes for
 # (skip NONE and very small roles for now)
@@ -35,7 +35,7 @@ def main():
     print(f"Total chunks: {len(df)}")
 
     print("\nLoading model...")
-    model = SentenceTransformer(MODEL_NAME, device="cuda")
+    model = SentenceTransformer(MODEL_NAME, device="cpu")
     print("Model loaded on GPU ✅")
 
     os.makedirs(INDEX_DIR, exist_ok=True)
