@@ -30,6 +30,12 @@ data/chunks/chunks_tagged.csv
 # Kaggle
 kaggle.json
 
+
+venv/
+venv311/
+__pycache__/
+*.pyc
+.env
 # OS
 .DS_Store
 Thumbs.db
