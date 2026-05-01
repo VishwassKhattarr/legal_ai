@@ -68,21 +68,21 @@ Explainable results returned
 
 ## Project Structure
 legal_ai/
-assistant.py              Main assistant pipeline
-preprocess.py             Data preprocessing
-tag_roles.py              Rhetorical role tagging
-build_role_index.py       FAISS index creation
-prepare_training_data.py  Triplet generation for fine-tuning
-finetune.py               Model fine-tuning
-search.py                 Search utilities
-rerank.py                 Reranking utilities
-app.py                    Application entry point
-download_data.py          Dataset download helper
-requirements.txt          Python dependencies
-data/                     Processed data and chunks
-faiss_indexes/            Generated FAISS indexes (local only)
-models/                   Local model weights (optional)
----
+├── assistant.py              Main assistant pipeline
+├── preprocess.py             Data preprocessing
+├── tag_roles.py              Rhetorical role tagging
+├── build_role_index.py       FAISS index creation
+├── prepare_training_data.py  Triplet generation for fine-tuning
+├── finetune.py               Model fine-tuning
+├── search.py                 Search utilities
+├── rerank.py                 Reranking utilities
+├── app.py                    Application entry point
+├── download_data.py          Dataset download helper
+├── requirements.txt          Python dependencies
+├── data/                     Processed data and chunks
+├── faiss_indexes/            Generated FAISS indexes (local only)
+└── models/                   Local model weights (optional)
+
 
 ## Setup
 
