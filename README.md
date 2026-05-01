@@ -1,186 +1,199 @@
 # AI Legal Assistant for Indian Case Law
 
-An end to end AI based legal assistant for analyzing, retrieving, and interpreting Indian Supreme Court judgments using transformer based models and semantic search.
+An end-to-end AI system for analyzing, retrieving, and interpreting Indian Supreme Court judgments using transformer-based models, semantic search, and rhetorical role-aware retrieval.
 
 ---
 
-## Problem Statement
+## Overview
 
-Legal documents are long, complex, and context heavy. Traditional keyword search fails because the same legal concept can be expressed in many ways, and relevance depends on legal reasoning rather than simple text matching.
+Legal documents are long, complex, and context-heavy. Traditional keyword search fails because the same legal concept can be expressed in many ways, and relevance depends on legal reasoning rather than simple text matching.
 
-This system addresses that by combining semantic retrieval, domain aware filtering, transformer reranking, and decision support reasoning.
+This system addresses that by combining semantic retrieval, domain-aware filtering, transformer reranking, and structured decision support — purpose-built for Indian case law.
 
 ---
 
 ## Features
 
-Rhetorical role aware retrieval  
-Chunks are tagged with 13 legal roles such as FAC, RATIO, RPC, STA and searched selectively based on query intent  
+**Rhetorical Role-Aware Retrieval**
+Chunks are tagged with 13 legal roles (FAC, RATIO, RPC, STA, and others) and searched selectively based on query intent, enabling precise segment-level retrieval.
 
-Intent detection  
-Automatically identifies query type such as bail, murder, rape, cheating, property and routes to relevant indexes  
+**Intent Detection**
+Automatically identifies the query type — bail, murder, rape, cheating, property disputes — and routes it to the most relevant indexes.
 
-Fine tuned legal encoder  
-Bi encoder based on InLegalBERT fine tuned on AILA 2019 relevance judgments  
+**Fine-Tuned Legal Encoder**
+A bi-encoder based on InLegalBERT, fine-tuned on AILA 2019 relevance judgments for domain-specific semantic understanding.
 
-FAISS role specific indexes  
-Multiple indexes for fast and targeted retrieval  
+**FAISS Role-Specific Indexes**
+Multiple FAISS indexes support fast, targeted retrieval segmented by rhetorical role.
 
-Cross encoder reranking  
-Improves precision by reranking retrieved results  
+**Cross-Encoder Reranking**
+Improves precision by reranking retrieved candidates using a cross-encoder model.
 
-Structured legal answers  
-Outputs concise legal insights from retrieved cases  
+**Structured Legal Answers**
+Outputs concise legal insights derived from retrieved case text, not raw document dumps.
 
-Decision support  
-Provides trend analysis such as relief likely, unlikely or mixed  
+**Decision Support**
+Provides precedent-based trend analysis: relief likely, unlikely, or mixed — grounded in retrieved cases.
 
-Explainability  
-Each result is linked with reasoning extracted from case text  
+**Explainability**
+Each result is linked with reasoning extracted from the source case text.
 
 ---
 
 ## Tech Stack
 
-Bi encoder retrieval  
-law ai InLegalBERT fine tuned or Hugging Face hosted model  
-
-Cross encoder reranking  
-cross encoder ms marco MiniLM L 12 v2  
-
-Vector search  
-FAISS  
-
-Rhetorical role tagging  
-Rule based tagging system with 13 roles  
-
-Fine tuning loss  
-Triplet loss  
-
-Dataset  
-AILA FIRE 2019  
-
-Language  
-Python  
+| Component | Implementation |
+|---|---|
+| Bi-encoder retrieval | InLegalBERT fine-tuned on AILA 2019 |
+| Cross-encoder reranking | `cross-encoder/ms-marco-MiniLM-L-12-v2` |
+| Vector search | FAISS |
+| Rhetorical role tagging | Rule-based system with 13 roles |
+| Fine-tuning loss | Triplet loss |
+| Dataset | AILA FIRE 2019 |
+| Language | Python |
 
 ---
 
 ## System Pipeline
-
-User Query  
-Intent Detection  
-Role specific index selection  
-Bi encoder retrieval  
-Cross encoder reranking  
-Answer generation  
-Decision support  
-Explainable results  
+User Query
+Query intent detection
+Role-specific index selection
+Bi-encoder retrieval
+Cross-encoder reranking
+Answer generation
+Decision support
+Explainable results returned
 
 ---
 
 ## Project Structure
-
-legal_ai/  
-assistant.py              main assistant pipeline  
-preprocess.py             data preprocessing  
-tag_roles.py              rhetorical role tagging  
-build_role_index.py       FAISS index creation  
-prepare_training_data.py  triplet generation  
-fintune.py                model fine tuning  
-search.py                 search utilities  
-rerank.py                 reranking utilities  
-app.py                    application entry  
-download_data.py          dataset download helper  
-requirements.txt          dependencies  
-data/                     processed data and chunks  
-faiss_indexes/            generated indexes  
-models/                   local models if used  
-
+legal_ai/
+assistant.py              Main assistant pipeline
+preprocess.py             Data preprocessing
+tag_roles.py              Rhetorical role tagging
+build_role_index.py       FAISS index creation
+prepare_training_data.py  Triplet generation for fine-tuning
+finetune.py               Model fine-tuning
+search.py                 Search utilities
+rerank.py                 Reranking utilities
+app.py                    Application entry point
+download_data.py          Dataset download helper
+requirements.txt          Python dependencies
+data/                     Processed data and chunks
+faiss_indexes/            Generated FAISS indexes (local only)
+models/                   Local model weights (optional)
 ---
 
-## Setup and Run
+## Setup
 
-### 1 Clone the repository
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/VishwassKhattarr/legal_ai.git
 cd legal_ai
+```
 
-### 2 Create environment
+### 2. Create environment
+
+```bash
 conda create -n legal_ai python=3.11 -y
 conda activate legal_ai
 pip install -r requirements.txt
+```
 
-### 3 Download dataset
-Download the dataset from Kaggle
-https://www.kaggle.com/datasets/ananyapam7/legalai
+### 3. Download the dataset
 
-Place the extracted files inside:
-data/raw/
+Download the AILA FIRE 2019 dataset from Kaggle:
+[https://www.kaggle.com/datasets/ananyapam7/legalai](https://www.kaggle.com/datasets/ananyapam7/legalai)
 
-### 4 Preprocess and build indexes
+Place the extracted files inside `data/raw/`.
+
+### 4. Preprocess and build indexes
+
+```bash
 python preprocess.py
 python tag_roles.py
 python build_role_index.py
-This step is mandatory. Without FAISS indexes, the system will not return any results.
+```
 
-### 5 Optional fine tuning
+> This step is mandatory. The system will not return results without FAISS indexes.
+
+### 5. Fine-tune (optional)
+
+```bash
 python prepare_training_data.py
-python fintune.py
+python finetune.py
+```
 
-### 6 Run the assistant
+### 6. Run the assistant
+
+```bash
 python assistant.py
+```
+
+---
 
 ## Pretrained Model
-A pretrained model is available on Hugging Face and can be used directly without training.
 
-https://huggingface.co/Sayyam9/legal-bert-aila-finetuned
+A pretrained model is available on Hugging Face and can be used directly without local fine-tuning.
 
-Set in code:
+[https://huggingface.co/Sayyam9/legal-bert-aila-finetuned](https://huggingface.co/Sayyam9/legal-bert-aila-finetuned)
+
+To use it, set the following in your code:
+
+```python
 MODEL_NAME = "Sayyam9/legal-bert-aila-finetuned"
+```
+
+---
 
 ## Important Notes
 
-The system will not work unless the dataset is downloaded and FAISS indexes are built.
+The system requires the dataset to be downloaded and FAISS indexes to be built locally before use.
 
-faiss_indexes folder is not included in the repository and must be generated locally.
+The `faiss_indexes/` folder is not included in the repository and must be generated by running `build_role_index.py`.
 
-No results found usually indicates missing indexes or missing data.
+If you see "No results found", it typically means the indexes are missing or the data was not placed in the correct directory.
 
-
+---
 
 ## Model Performance
 
-### Fine tuned InLegalBERT
-Triplet accuracy approximately 96.67 percent
+| Component | Result |
+|---|---|
+| Fine-tuned InLegalBERT (triplet accuracy) | ~96.67% |
+| Rhetorical role tagging coverage | ~56.9% |
+| Retrieval | Returns diverse relevant cases per query |
 
-### Rhetorical role tagging
-Coverage approximately 56.9 percent
+---
 
-### Retrieval
-Returns diverse relevant cases per query
+## Key Contributions
 
+Rhetorical role-aware retrieval integrated with semantic search
 
-### Contributions
-Rhetorical role aware retrieval integrated with semantic search
-Intent driven index routing
-Fine tuning on legal relevance dataset
-Hybrid ranking combining retrieval and reranking
-Decision support layer based on precedent trends
-Explainable outputs using structured reasoning
+Intent-driven index routing for query-type specificity
 
-### References
-AILA FIRE 2019 dataset
-Legal BERT research
-LREC rhetorical role corpus
-SemEval rhetorical role labeling
+Fine-tuning pipeline on AILA legal relevance judgments
 
-### Contributors
+Hybrid ranking combining bi-encoder retrieval with cross-encoder reranking
+
+Decision support layer grounded in precedent trend analysis
+
+Explainable outputs using structured reasoning from case text
+
+---
+
+## References
+
+AILA FIRE 2019 Dataset
+LegalBERT: The Muppets straight outta Law School
+LREC Rhetorical Role Corpus
+SemEval Rhetorical Role Labeling
+
+---
+
+## Contributors
+
 Vishwass Khattarr
 Sayyam Wad
-
-
-
-
-
-
 
