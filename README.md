@@ -67,6 +67,7 @@ Explainable results returned
 ---
 
 ## Project Structure
+```
 legal_ai/
 ├── assistant.py              Main assistant pipeline
 ├── preprocess.py             Data preprocessing
@@ -82,7 +83,7 @@ legal_ai/
 ├── data/                     Processed data and chunks
 ├── faiss_indexes/            Generated FAISS indexes (local only)
 └── models/                   Local model weights (optional)
-
+```
 
 ## Setup
 
